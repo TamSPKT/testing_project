@@ -27,7 +27,7 @@ class MyDetailPage extends StatelessWidget {
               var _product = snapshot.data as ProductModel;
               return Column(
                 children: [
-                  Flexible(
+                  Expanded(
                     child: SingleChildScrollView(
                       child: Column(
                         children: <Widget>[
