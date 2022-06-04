@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:testing_project/models/product.dart';
 
 class CartModel extends ChangeNotifier {
   final List<CartItem> _items = [];
 
   List<CartItem> get items => _items;
 
-  int get totalCost => _items.fold(0, (total, current) => total + (current.cost! * current.quantity));
+  int get totalCost => _items.fold(
+      0, (total, current) => total + (current.cost! * current.quantity));
 
   bool contains(int productId) => _items.contains(CartItem(id: productId));
 

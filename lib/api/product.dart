@@ -77,7 +77,8 @@ class ProductApi {
   }
 
   Future<List<ProductModel>> getProductsByName(String name) async {
-    final response = await _getRequest("$webApiPath/api/Product/Find?name=$name");
+    final response =
+        await _getRequest("$webApiPath/api/Product/Find?name=$name");
     if (response.statusCode == 200) {
       Iterable iterable = json.decode(response.body);
       return List<ProductModel>.from(

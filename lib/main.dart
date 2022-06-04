@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
         Provider(create: (context) => NavigationModel()),
         Provider(create: (context) => ProductModel()),
         Provider(create: (context) => OrderModel()),
-        ChangeNotifierProvider<FavoriteModel>(create: (context) => FavoriteModel()),
+        ChangeNotifierProvider<FavoriteModel>(
+            create: (context) => FavoriteModel()),
         ChangeNotifierProvider<Counter>(create: (context) => Counter()),
         ChangeNotifierProvider<CartModel>(create: (context) => CartModel()),
         ChangeNotifierProvider<UserModel>(create: (context) => UserModel()),
@@ -50,8 +51,10 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (context) => const MyStatefulWidget(),
-          '/login': (context) => const MyLoginPage(title: 'Đăng nhập tài khoản'),
-          '/signup': (context) => const MySignupPage(title: 'Đăng ký tài khoản'),
+          '/login': (context) =>
+              const MyLoginPage(title: 'Đăng nhập tài khoản'),
+          '/signup': (context) =>
+              const MySignupPage(title: 'Đăng ký tài khoản'),
           '/editUser': (context) => const MyEditUserInfo(),
           '/products': (context) => const MyProductsPage(),
           '/detail': (context) => const MyDetailPage(),

@@ -7,7 +7,8 @@ class FavoriteModel extends ChangeNotifier {
   List<int> get productIds => _productIds;
 
   Future<List<ProductModel>> getProductsList() async {
-    return await ProductModel().getProductsList(ProductArguments(ids: _productIds));
+    return await ProductModel()
+        .getProductsList(ProductArguments(ids: _productIds));
   }
 
   bool contains(int productId) => _productIds.contains(productId);

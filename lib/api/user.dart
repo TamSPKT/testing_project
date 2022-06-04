@@ -71,7 +71,8 @@ class UserApi {
     }
   }
 
-  Future<User> editUser(String userName, {required String phoneNumber, required String address}) async {
+  Future<User> editUser(String userName,
+      {required String phoneNumber, required String address}) async {
     Map<String, dynamic> data = {
       "phoneNumber": phoneNumber,
       "address": address,

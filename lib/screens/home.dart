@@ -44,8 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
       (products) => products.getProductsList(ProductArguments(randomCount: 5)),
     );
     var _futureBestSellProductsList =
-    context.select<ProductModel, Future<List<ProductModel>>>(
-          (products) => products.getProductsList(ProductArguments(randomCount: 5)),
+        context.select<ProductModel, Future<List<ProductModel>>>(
+      (products) => products.getProductsList(ProductArguments(randomCount: 5)),
     );
 
     return Scaffold(

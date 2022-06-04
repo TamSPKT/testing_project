@@ -1,5 +1,4 @@
 import 'package:testing_project/api/order.dart';
-import 'package:testing_project/models/product.dart';
 
 class OrderModel {
   late int id;

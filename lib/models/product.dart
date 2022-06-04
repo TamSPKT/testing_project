@@ -44,11 +44,12 @@ class Product {
   String imgUrl; // product image url
   int noOfRating; // number of rating
 
-  Product({required this.productName,
-    required this.imgUrl,
-    required this.price,
-    required this.rating,
-    required this.noOfRating});
+  Product(
+      {required this.productName,
+      required this.imgUrl,
+      required this.price,
+      required this.rating,
+      required this.noOfRating});
 }
 
 class ProductArguments {

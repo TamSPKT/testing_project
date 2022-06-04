@@ -31,8 +31,10 @@ class _MyEditUserInfoState extends State<MyEditUserInfo> {
     var _userModel = context.watch<UserModel>();
     var _userName = _userModel.user?.userName ?? "";
 
-    _myPhoneNumberController = TextEditingController(text: _userModel.user?.phoneNumber ?? "");
-    _myAddressController = TextEditingController(text: _userModel.user?.address ?? "");
+    _myPhoneNumberController =
+        TextEditingController(text: _userModel.user?.phoneNumber ?? "");
+    _myAddressController =
+        TextEditingController(text: _userModel.user?.address ?? "");
 
     return Scaffold(
         appBar: AppBar(
@@ -100,8 +102,8 @@ class _MyEditUserInfoState extends State<MyEditUserInfo> {
                               context, args.redirectRoute);
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content:
-                                  const Text('Xảy ra lỗi khi chỉnh sửa thông tin'),
+                              content: const Text(
+                                  'Xảy ra lỗi khi chỉnh sửa thông tin'),
                               action: SnackBarAction(
                                   label: 'Đóng',
                                   onPressed: () {
